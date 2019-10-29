@@ -29,8 +29,10 @@ module Lab2(
 );
 
 	wire s_clk; //calculate correct size
-	reg latch_out = 1'b1;
+	reg latch_out = 1'b0;
 	wire latch;
+
+	SevenSeg T0(.H(HEX3), .NUM(8'd88));
 
 	always @(negedge KEY[0])
 		begin
@@ -38,13 +40,13 @@ module Lab2(
 		end
 
 	assign latch = latch_out;
-	assign LEDR[0] = ~latch_out;
+	//assign LEDR[0] = ~latch_out;
 
-	clock_divider #(1_000_000) U0(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_clk));
+	clock_divider #(1_500_000) U0(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_clk));
 
-	assign LEDR[1] = s_clk;
+	//assign LEDR[1] = s_clk;
 
-	counters U1(.clk(s_clk), .reset_n(latch), .H0(HEX0), .H1(HEX1), .H2(HEX2), .H3(HEX3), .H4(HEX4), .H5(HEX5), .SW(SW), .LEDR(LEDR));
+	counters C0(.clk(s_clk), .reset_n(latch), .H0(HEX0), .H1(HEX1), .H2(HEX2), .H4(HEX4), .H5(HEX5), .KEY(KEY), .LEDR(LEDR), .SW(SW));
 
 
 endmodule

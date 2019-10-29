@@ -6,7 +6,7 @@ module clock_divider(
     output                      slower_clk      //calculate correct size!                
 );
 
-parameter clk_div = 0; //calculate correct size!
+parameter clk_div = 0;
 
 reg [23:0] div_cntr; //calculate correct size!
 reg slw_clk;
