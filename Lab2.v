@@ -40,13 +40,13 @@ module Lab2(
 		end
 
 	assign latch = latch_out;
-	//assign LEDR[0] = ~latch_out;
+	assign LEDR[0] = ~latch_out;
 
 	clock_divider #(3_000_000) U0(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_clk));
 
-	//assign LEDR[1] = s_clk;
+	assign LEDR[1] = s_clk;
 
-	counters C0(.clk(s_clk), .reset_n(latch), .H0(HEX0), .H1(HEX1), .H2(HEX2), .H4(HEX4), .H5(HEX5), .KEY(KEY), .LEDR(LEDR), .SW(SW));
+	counters C0(.clk(s_clk), .reset_n(latch), .H0(HEX0), .H1(HEX1), .H2(HEX2), .H4(HEX4), .H5(HEX5), .KEY(KEY), .SW(SW));
 
 
 endmodule

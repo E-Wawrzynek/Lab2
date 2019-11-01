@@ -35,6 +35,7 @@ module SevenSeg(
  
                 8'd88: value = 8'b11111111;
                 8'd99: value = 8'b10111111;
+                default: value = 8'b00000000;
             endcase
         end
  
