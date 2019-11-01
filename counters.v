@@ -29,6 +29,7 @@ always @(posedge clk, negedge reset_n)
             begin
                 cntr2 <= 8'd88;
                 cntr1 <= 8'd1;
+                cntr99 <= 8'd1;
             end
         else
             begin
@@ -36,6 +37,7 @@ always @(posedge clk, negedge reset_n)
                     begin
                         cntr2 <= cntr2;
                         cntr1 <= cntr1 + 1;
+                        cntr99 <= cntr99 + 1;
                     end
                 else if(cntr1 == 9)
                     begin
@@ -43,36 +45,39 @@ always @(posedge clk, negedge reset_n)
                             begin
                                 cntr2 <= 8'd1;
                                 cntr1 <= 8'd0;
+                                cntr99 <= cntr99 + 1;
                             end
                         else if(cntr2 == 8'd9)
                             begin
                                 cntr2 <= 8'd88;
                                 cntr1 <= 8'd1;
+                                cntr99 <= 8'd1;
                             end
                         else
                             begin
                                 cntr2 <= cntr2 + 1;
                                 cntr1 <= 8'd0;
+                                cntr99 <= cntr99 + 1;
                             end
                     end
             end
     end
 
-    always @(posedge clk, negedge reset_n)
-        begin
-            if(reset_n == 0)
-                begin
-                    cntr99 <= 8'd1;
-                end
-            else if(cntr99 <= 99)
-                begin
-                    cntr99 <= cntr99 + 1;
-                end
-            else if(cntr99 == 99)
-                begin
-                    cntr99 <= 8'd1;
-                end
-        end
+    // always @(posedge clk, negedge reset_n)
+    //     begin
+    //         if(reset_n == 0)
+    //             begin
+    //                 cntr99 <= 8'd1;
+    //             end
+    //         else if(cntr99 <= 99)
+    //             begin
+    //                 cntr99 <= cntr99 + 1;
+    //             end
+    //         else if(cntr99 == 99)
+    //             begin
+    //                 cntr99 <= 8'd1;
+    //             end
+    //     end
 
     // wire [6:0] binary_val;
     // assign binary_val = (cntr99[7:4] * 10) + ({3'b0, cntr99[3:0]});

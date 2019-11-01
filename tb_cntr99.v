@@ -7,7 +7,7 @@ module tb_cntr99(
     wire [7:0] c1;
     wire [7:0] c2;
 
-    counters R0(.clk(CLOCK), .reset_n(RESET));
+    counters R0(.clk(CLOCK), .reset_n(RESET), .cntr_99(cntr));
     
     initial
         begin
@@ -28,7 +28,7 @@ module tb_cntr99(
 
     initial
         begin
-        $monitor("%d,\t%b,\t%b, \t%b, \t%b", $time, CLOCK);        
+        $monitor("%d,\t%b,\t%b,", $time, CLOCK, cntr);        
         end
 
         initial
