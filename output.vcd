@@ -1,5 +1,5 @@
 $date
-	Tue Nov 05 15:43:55 2019
+	Tue Nov 05 15:55:25 2019
 $end
 $version
 	Icarus Verilog
@@ -18,161 +18,159 @@ $var wire 8 ' H1 [7:0] $end
 $var wire 8 ( H0 [7:0] $end
 $var reg 1 ) CLOCK $end
 $var reg 10 * SW [9:0] $end
-$var reg 8 + feb_day [7:0] $end
 $scope module R0 $end
 $var wire 1 ) ADC_CLK_10 $end
-$var wire 2 , KEY [1:0] $end
-$var wire 10 - SW [9:0] $end
-$var wire 1 . latch $end
-$var wire 1 / val $end
-$var wire 1 0 s_clk $end
-$var wire 10 1 LEDR [9:0] $end
-$var wire 8 2 HEX5 [7:0] $end
-$var wire 8 3 HEX4 [7:0] $end
-$var wire 8 4 HEX3 [7:0] $end
-$var wire 8 5 HEX2 [7:0] $end
-$var wire 8 6 HEX1 [7:0] $end
-$var wire 8 7 HEX0 [7:0] $end
-$var reg 1 8 div_val $end
-$var reg 8 9 feb_day [7:0] $end
-$var reg 1 : latch_out $end
+$var wire 2 + KEY [1:0] $end
+$var wire 10 , SW [9:0] $end
+$var wire 1 - latch $end
+$var wire 1 . val $end
+$var wire 1 / s_clk $end
+$var wire 10 0 LEDR [9:0] $end
+$var wire 8 1 HEX5 [7:0] $end
+$var wire 8 2 HEX4 [7:0] $end
+$var wire 8 3 HEX3 [7:0] $end
+$var wire 8 4 HEX2 [7:0] $end
+$var wire 8 5 HEX1 [7:0] $end
+$var wire 8 6 HEX0 [7:0] $end
+$var reg 1 7 div_val $end
+$var reg 8 8 feb_day [7:0] $end
+$var reg 1 9 latch_out $end
 $scope module C0 $end
-$var wire 2 ; KEY [1:0] $end
-$var wire 10 < SW [9:0] $end
-$var wire 8 = feb_day [7:0] $end
-$var wire 1 . reset_n $end
-$var wire 1 0 clk $end
-$var wire 8 > H5 [7:0] $end
-$var wire 8 ? H4 [7:0] $end
-$var wire 8 @ H2 [7:0] $end
-$var wire 8 A H1 [7:0] $end
-$var wire 8 B H0 [7:0] $end
-$var reg 8 C cntr1 [7:0] $end
-$var reg 8 D cntr2 [7:0] $end
-$var reg 8 E cntr99 [7:0] $end
+$var wire 2 : KEY [1:0] $end
+$var wire 10 ; SW [9:0] $end
+$var wire 8 < feb_day [7:0] $end
+$var wire 1 - reset_n $end
+$var wire 1 / clk $end
+$var wire 8 = H5 [7:0] $end
+$var wire 8 > H4 [7:0] $end
+$var wire 8 ? H2 [7:0] $end
+$var wire 8 @ H1 [7:0] $end
+$var wire 8 A H0 [7:0] $end
+$var reg 8 B cntr1 [7:0] $end
+$var reg 8 C cntr2 [7:0] $end
+$var reg 8 D cntr99 [7:0] $end
 $scope module M0 $end
-$var wire 10 F SW [9:0] $end
-$var wire 8 G cntr99 [7:0] $end
-$var wire 8 H feb_day [7:0] $end
-$var wire 1 . reset_n $end
-$var wire 1 0 clk $end
-$var wire 8 I H2 [7:0] $end
-$var wire 8 J H1 [7:0] $end
-$var wire 8 K H0 [7:0] $end
-$var reg 8 L day_cntr [7:0] $end
-$var reg 8 M month_d [7:0] $end
+$var wire 10 E SW [9:0] $end
+$var wire 8 F cntr99 [7:0] $end
+$var wire 8 G feb_day [7:0] $end
+$var wire 1 - reset_n $end
+$var wire 1 / clk $end
+$var wire 8 H H2 [7:0] $end
+$var wire 8 I H1 [7:0] $end
+$var wire 8 J H0 [7:0] $end
+$var reg 8 K day_cntr [7:0] $end
+$var reg 8 L month_d [7:0] $end
 $scope module D0 $end
-$var wire 8 N day_cntr [7:0] $end
-$var wire 8 O H1 [7:0] $end
-$var wire 8 P H0 [7:0] $end
-$var reg 8 Q ones_digit [7:0] $end
-$var reg 8 R tens_digit [7:0] $end
+$var wire 8 M day_cntr [7:0] $end
+$var wire 8 N H1 [7:0] $end
+$var wire 8 O H0 [7:0] $end
+$var reg 8 P ones_digit [7:0] $end
+$var reg 8 Q tens_digit [7:0] $end
 $scope module S1 $end
-$var wire 8 S H [7:0] $end
-$var wire 8 T NUM [7:0] $end
-$var reg 8 U value [7:0] $end
+$var wire 8 R H [7:0] $end
+$var wire 8 S NUM [7:0] $end
+$var reg 8 T value [7:0] $end
 $upscope $end
 $scope module S2 $end
-$var wire 8 V H [7:0] $end
-$var wire 8 W NUM [7:0] $end
-$var reg 8 X value [7:0] $end
+$var wire 8 U H [7:0] $end
+$var wire 8 V NUM [7:0] $end
+$var reg 8 W value [7:0] $end
 $upscope $end
 $upscope $end
 $scope module S0 $end
-$var wire 8 Y H [7:0] $end
-$var wire 8 Z NUM [7:0] $end
-$var reg 8 [ value [7:0] $end
+$var wire 8 X H [7:0] $end
+$var wire 8 Y NUM [7:0] $end
+$var reg 8 Z value [7:0] $end
 $upscope $end
 $upscope $end
 $scope module W0 $end
-$var wire 8 \ H [7:0] $end
-$var wire 8 ] NUM [7:0] $end
-$var reg 8 ^ value [7:0] $end
+$var wire 8 [ H [7:0] $end
+$var wire 8 \ NUM [7:0] $end
+$var reg 8 ] value [7:0] $end
 $upscope $end
 $scope module W1 $end
-$var wire 8 _ H [7:0] $end
-$var wire 8 ` NUM [7:0] $end
-$var reg 8 a value [7:0] $end
+$var wire 8 ^ H [7:0] $end
+$var wire 8 _ NUM [7:0] $end
+$var reg 8 ` value [7:0] $end
 $upscope $end
 $upscope $end
 $scope module T0 $end
-$var wire 8 b H [7:0] $end
-$var wire 8 c NUM [7:0] $end
-$var reg 8 d value [7:0] $end
+$var wire 8 a H [7:0] $end
+$var wire 8 b NUM [7:0] $end
+$var reg 8 c value [7:0] $end
 $upscope $end
 $scope module U0 $end
 $var wire 1 ) clk $end
-$var wire 1 . reset_n $end
-$var wire 1 0 slower_clk $end
-$var reg 24 e div_cntr [23:0] $end
-$var reg 1 0 slw_clk $end
+$var wire 1 - reset_n $end
+$var wire 1 / slower_clk $end
+$var reg 24 d div_cntr [23:0] $end
+$var reg 1 / slw_clk $end
 $upscope $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-b0 e
-b11111111 d
-b1011000 c
-b11111111 b
+b0 d
+b11111111 c
+b1011000 b
 b11111111 a
-b1011000 `
-b11111111 _
-b11111001 ^
-b1 ]
-b11111001 \
+b11111111 `
+b1011000 _
+b11111111 ^
+b11111001 ]
+b1 \
 b11111001 [
-b1 Z
-b11111001 Y
-b11111111 X
-b1011000 W
-b11111111 V
-b11111001 U
-b1 T
-b11111001 S
-b1011000 R
-b1 Q
-b11111001 P
-b11111111 O
-b1 N
+b11111001 Z
+b1 Y
+b11111001 X
+b11111111 W
+b1011000 V
+b11111111 U
+b11111001 T
+b1 S
+b11111001 R
+b1011000 Q
+b1 P
+b11111001 O
+b11111111 N
 b1 M
 b1 L
-b11111001 K
-b11111111 J
-b11111001 I
-b11100 H
-b1 G
-b100000000 F
-b1 E
-b1011000 D
-b1 C
-b11111001 B
-b11111111 A
-b11111001 @
+b1 K
+b11111001 J
+b11111111 I
+b11111001 H
+b11100 G
+b1 F
+b0xxxxxxxxx E
+b1 D
+b1011000 C
+b1 B
+b11111001 A
+b11111111 @
 b11111001 ?
-b11111111 >
-b11100 =
-b100000000 <
-bz ;
-0:
-b11100 9
-18
-b11111001 7
-b11111111 6
-b11111001 5
-b11111111 4
-b11111001 3
-b11111111 2
-bz01 1
-00
-1/
-0.
-b100000000 -
-bz ,
-bx +
-b100000000 *
-x)
+b11111001 >
+b11111111 =
+b11100 <
+b0xxxxxxxxx ;
+bz :
+09
+b11100 8
+17
+b11111001 6
+b11111111 5
+b11111001 4
+b11111111 3
+b11111001 2
+b11111111 1
+bz01 0
+0/
+1.
+0-
+b0xxxxxxxxx ,
+bz +
+b0xxxxxxxxx *
+0)
 b11111001 (
 b11111111 '
 b11111001 &
@@ -182,8 +180,58 @@ b11111111 #
 bz01 "
 bz !
 $end
+#50
+b11101 8
+b11101 <
+b11101 G
+b1xxxxxxxxx *
+b1xxxxxxxxx ,
+b1xxxxxxxxx ;
+b1xxxxxxxxx E
+1)
 #100
-b0 *
-b0 -
-b0 <
-b0 F
+0)
+#150
+b11100 8
+b11100 <
+b11100 G
+b0xxxxxxxxx *
+b0xxxxxxxxx ,
+b0xxxxxxxxx ;
+b0xxxxxxxxx E
+1)
+#200
+0)
+#250
+b11101 8
+b11101 <
+b11101 G
+b1xxxxxxxxx *
+b1xxxxxxxxx ,
+b1xxxxxxxxx ;
+b1xxxxxxxxx E
+1)
+#300
+0)
+#350
+b11100 8
+b11100 <
+b11100 G
+b0xxxxxxxxx *
+b0xxxxxxxxx ,
+b0xxxxxxxxx ;
+b0xxxxxxxxx E
+1)
+#400
+0)
+#450
+b11101 8
+b11101 <
+b11101 G
+b1xxxxxxxxx *
+b1xxxxxxxxx ,
+b1xxxxxxxxx ;
+b1xxxxxxxxx E
+1)
+#500
+0)

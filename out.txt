@@ -1,2 +1,9 @@
+VCD info: dumpfile output.vcd opened for output.
+Starting simulation
 Simulation ended.
-                   0,	x
+                   0,	0
+                   5,	1
+                  15,	0
+                  25,	1
+                  35,	0
+                  45,	1

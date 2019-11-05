@@ -20,20 +20,19 @@ module tb_leapyear(
 
     Lab2 R0(.ADC_CLK_10(CLOCK), .HEX0(H0), .HEX1(H1), .HEX2(H2), .HEX3(H3), .HEX4(H4), .HEX5(H5), .KEY(KEY), .LEDR(LED), .SW(SW));
 
-    // initial
-    //     begin
-    //         $dumpfile("output.vcd");
-    //         $dumpvars;
-    //         $display("Starting simulation");
+    initial
+        begin
+            CLOCK = 1'b0;
+            SW[9] = 9'b000000000;
+        end
 
-    //         SW[9:0] = 9'b100000000;
-    //         #10 if(feb_day != 29)
-    //             $display("ERROR: feb_day not correct value");
-            
-    //         SW[9:0] = 9'b000000000;
-    //         #10 if(feb_day != 28)
-    //             $display("ERROR: feb_day not correct value");
-    //     end
+    initial
+        begin
+            $dumpfile("output.vcd");
+            $dumpvars;
+            $display("Starting simulation");
+        end   
+
 
     always
         #5 CLOCK = ~CLOCK;
@@ -49,7 +48,7 @@ module tb_leapyear(
         initial
             begin
             $display("Simulation ended.");
-            #500 $finish;
+            #50 $finish;
             end
 
 endmodule
