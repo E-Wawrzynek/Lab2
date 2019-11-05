@@ -27,8 +27,7 @@ module Lab2(
 	//////////// SW //////////
 	input 		     [9:0]		SW
 );
-
-	wire s_clk; //calculate correct size
+	wire s_clk;
 	reg latch_out = 1'b0;
 	wire latch;
 
@@ -42,9 +41,22 @@ module Lab2(
 	assign latch = latch_out;
 	assign LEDR[0] = ~latch_out;
 
-	clock_divider #(3_000_000) U0(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_clk));
-
 	assign LEDR[1] = s_clk;
+
+	clock_divider #(5_000_000) U0(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_clk));
+	clock_divider #(1_000_000) U1(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_clk));
+
+	reg div_val = 1'b1;
+	wire val;
+
+	always @(negedge KEY[1])
+		begin
+			div_val <= ~div_val;
+		end
+
+	assign val = div_val;
+
+	// clock_choice L0(.);
 
 	counters C0(.clk(s_clk), .reset_n(latch), .H0(HEX0), .H1(HEX1), .H2(HEX2), .H4(HEX4), .H5(HEX5), .KEY(KEY), .SW(SW));
 

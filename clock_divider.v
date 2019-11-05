@@ -16,6 +16,7 @@ module clock_divider(
             if(reset_n == 0)
                 begin
                     div_cntr <= 0;
+                    slw_clk <= 0;
                 end
             else if(div_cntr == clk_div - 1)
                 begin
