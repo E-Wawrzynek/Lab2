@@ -2,6 +2,7 @@ module monthday(
     input                       clk,
     input                       reset_n,
     input            [7:0]      cntr99,
+    input            [7:0]      feb_day,
 
 	output           [7:0]      H0,
     output           [7:0]      H1,
@@ -21,20 +22,20 @@ module monthday(
                 month_d <= 8'd1;
                 day_cntr <= cntr99;
                 end
-            else if(cntr99 <= 8'd59)
+            else if(cntr99 <= (8'd31 + feb_day))
                 begin
                     month_d <= 8'd2;
                     day_cntr <= cntr99 - 31;
                 end
-            else if(cntr99 <= 8'd90)
+            else if(cntr99 <= (8'd31 + feb_day + 8'd31))
                 begin
                     month_d <= 8'd3;
-                    day_cntr <= cntr99 - 31 - 28;
+                    day_cntr <= cntr99 - (8'd31 + feb_day);
                 end
             else
                 begin
                     month_d <= 8'd4;
-                    day_cntr <= cntr99 - 31 - 28 - 31;
+                    day_cntr <= cntr99 - (8'd31 + feb_day + 8'd31);
                 end
         end
 

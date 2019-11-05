@@ -1,6 +1,7 @@
 module counters(
     input                       clk,
     input                       reset_n,
+    input            [7:0]      feb_day,
 
     output           [7:0]      H0,
     output           [7:0]      H1,
@@ -59,7 +60,7 @@ module counters(
                 end
         end
 
-    monthday M0(.clk(clk), .reset_n(reset_n), .cntr99(cntr99), .H0(H0), .H1(H1), .H2(H2), .SW(SW));
+    monthday M0(.clk(clk), .reset_n(reset_n), .cntr99(cntr99), .feb_day(feb_day), .H0(H0), .H1(H1), .H2(H2), .SW(SW));
 
     SevenSeg W0(.H(H4), .NUM(cntr1));
     SevenSeg W1(.H(H5), .NUM(cntr2));

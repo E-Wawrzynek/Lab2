@@ -7,8 +7,6 @@ module Lab2(
 
 	//////////// CLOCK //////////
 	input 		          		ADC_CLK_10,
-	input 		          		MAX10_CLK1_50,
-	input 		          		MAX10_CLK2_50,
 
 	//////////// SEG7 //////////
 	output		     [7:0]		HEX0,
@@ -43,6 +41,16 @@ module Lab2(
 
 	assign LEDR[1] = s_clk;
 
+	reg [7:0] feb_day;
+	
+		always @(SW[9])
+			begin
+				if(SW[9] == 1)
+					feb_day <= 8'd29;
+				else
+					feb_day <= 8'd28;
+			end
+
 	reg div_val = 1'b1;
 	wire val;
 
@@ -52,10 +60,10 @@ module Lab2(
 		end
 
 	assign val = div_val;
+	clock_divider #(5_000_000) U0(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_clk));
+	//clock_choice L0(.select(val), .latch(latch), .s_clk(s_clk), .KEY(KEY));
 
-	clock_choice L0(.select(val), .latch(latch), .s_clk(s_clk), .KEY(KEY));
-
-	counters C0(.clk(s_clk), .reset_n(latch), .H0(HEX0), .H1(HEX1), .H2(HEX2), .H4(HEX4), .H5(HEX5), .KEY(KEY), .SW(SW));
+	counters C0(.clk(s_clk), .reset_n(latch), .feb_day(feb_day), .H0(HEX0), .H1(HEX1), .H2(HEX2), .H4(HEX4), .H5(HEX5), .KEY(KEY), .SW(SW));
 
 
 endmodule
