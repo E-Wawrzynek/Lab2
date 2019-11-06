@@ -1,5 +1,5 @@
 $date
-	Tue Nov 05 15:55:25 2019
+	Tue Nov 05 19:42:48 2019
 $end
 $version
 	Icarus Verilog
@@ -7,231 +7,238 @@ $end
 $timescale
 	100ps
 $end
-$scope module tb_leapyear $end
-$var wire 2 ! KEY [1:0] $end
-$var wire 10 " LED [9:0] $end
-$var wire 8 # H5 [7:0] $end
-$var wire 8 $ H4 [7:0] $end
-$var wire 8 % H3 [7:0] $end
-$var wire 8 & H2 [7:0] $end
-$var wire 8 ' H1 [7:0] $end
-$var wire 8 ( H0 [7:0] $end
-$var reg 1 ) CLOCK $end
+$scope module tb_clockchoice $end
+$var wire 10 ! LED [9:0] $end
+$var wire 8 " H5 [7:0] $end
+$var wire 8 # H4 [7:0] $end
+$var wire 8 $ H3 [7:0] $end
+$var wire 8 % H2 [7:0] $end
+$var wire 8 & H1 [7:0] $end
+$var wire 8 ' H0 [7:0] $end
+$var reg 1 ( CLOCK $end
+$var reg 2 ) KEY [1:0] $end
 $var reg 10 * SW [9:0] $end
-$scope module R0 $end
-$var wire 1 ) ADC_CLK_10 $end
+$scope module R1 $end
+$var wire 1 ( ADC_CLK_10 $end
 $var wire 2 + KEY [1:0] $end
 $var wire 10 , SW [9:0] $end
 $var wire 1 - latch $end
-$var wire 1 . val $end
-$var wire 1 / s_clk $end
-$var wire 10 0 LEDR [9:0] $end
-$var wire 8 1 HEX5 [7:0] $end
-$var wire 8 2 HEX4 [7:0] $end
-$var wire 8 3 HEX3 [7:0] $end
-$var wire 8 4 HEX2 [7:0] $end
-$var wire 8 5 HEX1 [7:0] $end
-$var wire 8 6 HEX0 [7:0] $end
-$var reg 1 7 div_val $end
-$var reg 8 8 feb_day [7:0] $end
-$var reg 1 9 latch_out $end
+$var wire 1 . s_clk $end
+$var wire 1 / val $end
+$var wire 1 0 s_clk2 $end
+$var wire 1 1 s_clk1 $end
+$var wire 10 2 LEDR [9:0] $end
+$var wire 8 3 HEX5 [7:0] $end
+$var wire 8 4 HEX4 [7:0] $end
+$var wire 8 5 HEX3 [7:0] $end
+$var wire 8 6 HEX2 [7:0] $end
+$var wire 8 7 HEX1 [7:0] $end
+$var wire 8 8 HEX0 [7:0] $end
+$var reg 1 9 div_val $end
+$var reg 8 : feb_day [7:0] $end
+$var reg 1 ; latch_out $end
 $scope module C0 $end
-$var wire 2 : KEY [1:0] $end
-$var wire 10 ; SW [9:0] $end
-$var wire 8 < feb_day [7:0] $end
+$var wire 2 < KEY [1:0] $end
+$var wire 10 = SW [9:0] $end
+$var wire 1 . clk $end
+$var wire 8 > feb_day [7:0] $end
 $var wire 1 - reset_n $end
-$var wire 1 / clk $end
-$var wire 8 = H5 [7:0] $end
-$var wire 8 > H4 [7:0] $end
-$var wire 8 ? H2 [7:0] $end
-$var wire 8 @ H1 [7:0] $end
-$var wire 8 A H0 [7:0] $end
-$var reg 8 B cntr1 [7:0] $end
-$var reg 8 C cntr2 [7:0] $end
-$var reg 8 D cntr99 [7:0] $end
+$var wire 8 ? H5 [7:0] $end
+$var wire 8 @ H4 [7:0] $end
+$var wire 8 A H2 [7:0] $end
+$var wire 8 B H1 [7:0] $end
+$var wire 8 C H0 [7:0] $end
+$var reg 8 D cntr1 [7:0] $end
+$var reg 8 E cntr2 [7:0] $end
+$var reg 8 F cntr99 [7:0] $end
 $scope module M0 $end
-$var wire 10 E SW [9:0] $end
-$var wire 8 F cntr99 [7:0] $end
-$var wire 8 G feb_day [7:0] $end
+$var wire 10 G SW [9:0] $end
+$var wire 1 . clk $end
+$var wire 8 H cntr99 [7:0] $end
+$var wire 8 I feb_day [7:0] $end
 $var wire 1 - reset_n $end
-$var wire 1 / clk $end
-$var wire 8 H H2 [7:0] $end
-$var wire 8 I H1 [7:0] $end
-$var wire 8 J H0 [7:0] $end
-$var reg 8 K day_cntr [7:0] $end
-$var reg 8 L month_d [7:0] $end
+$var wire 8 J H2 [7:0] $end
+$var wire 8 K H1 [7:0] $end
+$var wire 8 L H0 [7:0] $end
+$var reg 8 M day_cntr [7:0] $end
+$var reg 8 N month_d [7:0] $end
 $scope module D0 $end
-$var wire 8 M day_cntr [7:0] $end
-$var wire 8 N H1 [7:0] $end
-$var wire 8 O H0 [7:0] $end
-$var reg 8 P ones_digit [7:0] $end
-$var reg 8 Q tens_digit [7:0] $end
+$var wire 8 O day_cntr [7:0] $end
+$var wire 8 P H1 [7:0] $end
+$var wire 8 Q H0 [7:0] $end
+$var reg 8 R ones_digit [7:0] $end
+$var reg 8 S tens_digit [7:0] $end
 $scope module S1 $end
-$var wire 8 R H [7:0] $end
-$var wire 8 S NUM [7:0] $end
-$var reg 8 T value [7:0] $end
+$var wire 8 T H [7:0] $end
+$var wire 8 U NUM [7:0] $end
+$var reg 8 V value [7:0] $end
 $upscope $end
 $scope module S2 $end
-$var wire 8 U H [7:0] $end
-$var wire 8 V NUM [7:0] $end
-$var reg 8 W value [7:0] $end
+$var wire 8 W H [7:0] $end
+$var wire 8 X NUM [7:0] $end
+$var reg 8 Y value [7:0] $end
 $upscope $end
 $upscope $end
 $scope module S0 $end
-$var wire 8 X H [7:0] $end
-$var wire 8 Y NUM [7:0] $end
-$var reg 8 Z value [7:0] $end
+$var wire 8 Z H [7:0] $end
+$var wire 8 [ NUM [7:0] $end
+$var reg 8 \ value [7:0] $end
 $upscope $end
 $upscope $end
 $scope module W0 $end
-$var wire 8 [ H [7:0] $end
-$var wire 8 \ NUM [7:0] $end
-$var reg 8 ] value [7:0] $end
+$var wire 8 ] H [7:0] $end
+$var wire 8 ^ NUM [7:0] $end
+$var reg 8 _ value [7:0] $end
 $upscope $end
 $scope module W1 $end
-$var wire 8 ^ H [7:0] $end
-$var wire 8 _ NUM [7:0] $end
-$var reg 8 ` value [7:0] $end
+$var wire 8 ` H [7:0] $end
+$var wire 8 a NUM [7:0] $end
+$var reg 8 b value [7:0] $end
 $upscope $end
+$upscope $end
+$scope module L0 $end
+$var wire 1 - latch $end
+$var wire 1 . s_clk $end
+$var wire 1 / select $end
+$var wire 1 0 s2 $end
+$var wire 1 1 s1 $end
+$var reg 1 c SCLK $end
 $upscope $end
 $scope module T0 $end
-$var wire 8 a H [7:0] $end
-$var wire 8 b NUM [7:0] $end
-$var reg 8 c value [7:0] $end
+$var wire 8 d H [7:0] $end
+$var wire 8 e NUM [7:0] $end
+$var reg 8 f value [7:0] $end
 $upscope $end
 $scope module U0 $end
-$var wire 1 ) clk $end
+$var wire 1 ( clk $end
 $var wire 1 - reset_n $end
-$var wire 1 / slower_clk $end
-$var reg 24 d div_cntr [23:0] $end
-$var reg 1 / slw_clk $end
+$var wire 1 1 slower_clk $end
+$var reg 24 g div_cntr [23:0] $end
+$var reg 1 h slw_clk $end
+$upscope $end
+$scope module U1 $end
+$var wire 1 ( clk $end
+$var wire 1 - reset_n $end
+$var wire 1 0 slower_clk $end
+$var reg 24 i div_cntr [23:0] $end
+$var reg 1 j slw_clk $end
 $upscope $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-b0 d
-b11111111 c
-b1011000 b
-b11111111 a
+0j
+b0 i
+0h
+b0 g
+b11111111 f
+b1011000 e
+b11111111 d
+0c
+b11111111 b
+b1011000 a
 b11111111 `
-b1011000 _
-b11111111 ^
+b11111001 _
+b1 ^
 b11111001 ]
-b1 \
-b11111001 [
+b11111001 \
+b1 [
 b11111001 Z
-b1 Y
-b11111001 X
+b11111111 Y
+b1011000 X
 b11111111 W
-b1011000 V
-b11111111 U
+b11111001 V
+b1 U
 b11111001 T
-b1 S
-b11111001 R
-b1011000 Q
-b1 P
-b11111001 O
-b11111111 N
+b1011000 S
+b1 R
+b11111001 Q
+b11111111 P
+b1 O
+b1 N
 b1 M
-b1 L
-b1 K
+b11111001 L
+b11111111 K
 b11111001 J
-b11111111 I
-b11111001 H
-b11100 G
+bx I
+b1 H
+bx G
 b1 F
-b0xxxxxxxxx E
+b1011000 E
 b1 D
-b1011000 C
-b1 B
+b11111001 C
+b11111111 B
 b11111001 A
-b11111111 @
-b11111001 ?
-b11111001 >
-b11111111 =
-b11100 <
-b0xxxxxxxxx ;
-bz :
+b11111001 @
+b11111111 ?
+bx >
+bx =
+b0x <
+0;
+bx :
 09
-b11100 8
-17
+b11111001 8
+b11111111 7
 b11111001 6
 b11111111 5
 b11111001 4
 b11111111 3
-b11111001 2
-b11111111 1
-bz01 0
+bz01 2
+01
+00
 0/
-1.
+0.
 0-
-b0xxxxxxxxx ,
-bz +
-b0xxxxxxxxx *
-0)
-b11111001 (
-b11111111 '
-b11111001 &
-b11111111 %
-b11111001 $
-b11111111 #
-bz01 "
-bz !
+bx ,
+b0x +
+bx *
+b0x )
+0(
+b11111001 '
+b11111111 &
+b11111001 %
+b11111111 $
+b11111001 #
+b11111111 "
+bz01 !
 $end
 #50
-b11101 8
-b11101 <
-b11101 G
-b1xxxxxxxxx *
-b1xxxxxxxxx ,
-b1xxxxxxxxx ;
-b1xxxxxxxxx E
-1)
+b1x )
+b1x +
+b1x <
+1(
 #100
-0)
+0(
 #150
-b11100 8
-b11100 <
-b11100 G
-b0xxxxxxxxx *
-b0xxxxxxxxx ,
-b0xxxxxxxxx ;
-b0xxxxxxxxx E
-1)
+1/
+19
+b0x )
+b0x +
+b0x <
+1(
 #200
-0)
+0(
 #250
-b11101 8
-b11101 <
-b11101 G
-b1xxxxxxxxx *
-b1xxxxxxxxx ,
-b1xxxxxxxxx ;
-b1xxxxxxxxx E
-1)
+b1x )
+b1x +
+b1x <
+1(
 #300
-0)
+0(
 #350
-b11100 8
-b11100 <
-b11100 G
-b0xxxxxxxxx *
-b0xxxxxxxxx ,
-b0xxxxxxxxx ;
-b0xxxxxxxxx E
-1)
+0/
+09
+b0x )
+b0x +
+b0x <
+1(
 #400
-0)
+0(
 #450
-b11101 8
-b11101 <
-b11101 G
-b1xxxxxxxxx *
-b1xxxxxxxxx ,
-b1xxxxxxxxx ;
-b1xxxxxxxxx E
-1)
+b1x )
+b1x +
+b1x <
+1(
 #500
-0)
+0(
