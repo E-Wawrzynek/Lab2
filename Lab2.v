@@ -26,6 +26,8 @@ module Lab2(
 	input 		     [9:0]		SW
 );
 	wire s_clk;
+	wire s_clk1;
+	wire s_clk2;
 	reg latch_out = 1'b0;
 	wire latch;
 
@@ -60,8 +62,11 @@ module Lab2(
 		end
 
 	assign val = div_val;
-	clock_divider #(5_000_000) U0(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_clk));
-	//clock_choice L0(.select(val), .latch(latch), .s_clk(s_clk), .KEY(KEY));
+	
+	clock_divider #(1_000_000) U0(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_clk1));
+	clock_divider #(5_000_000) U1(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_clk2));
+
+	clock_choice L0(.select(val), .latch(latch), .s_clk(s_clk), .s1(s_clk1), .s2(s_clk2));
 
 	counters C0(.clk(s_clk), .reset_n(latch), .feb_day(feb_day), .H0(HEX0), .H1(HEX1), .H2(HEX2), .H4(HEX4), .H5(HEX5), .KEY(KEY), .SW(SW));
 

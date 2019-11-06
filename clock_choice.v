@@ -5,21 +5,22 @@ module clock_choice(
     input                        latch,
     output                       s_clk,
 
-	//////////// KEY //////////
-	input 		     [1:0]		KEY
+	input                        s1,
+    input                 [0:0]  s2
 );
 
-    parameter div_hold = 0;
-
-    clock_divider #(div_hold) U0(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_clk));
-	clock_divider #(div_hold) U1(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_clk));
+    reg SCLK;
+    
+    assign s_clk = SCLK;
 
     always @(select)
         begin
             case(select)
-                1: div_hold = 1_000_000;
-                0: div_hold = 5_000_000;
+                0: SCLK = s1;
+                1: SCLK = s2;
             endcase 
         end
+
+    assign s_clk = SCLK;
 
 endmodule
