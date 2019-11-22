@@ -39,7 +39,7 @@ module Lab2(
 		end
 
 	assign latch = latch_out;
-	assign LEDR[0] = ~latch_out;
+	assign LEDR[0] = latch_out;
 
 	assign LEDR[1] = s_clk;
 

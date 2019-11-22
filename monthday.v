@@ -13,7 +13,7 @@ module monthday(
 );
 
     reg [7:0] month_d;
-    reg[7:0] day_cntr;
+    reg [7:0] day_cntr;
 
     always @(cntr99)
         begin

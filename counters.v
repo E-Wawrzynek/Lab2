@@ -1,7 +1,7 @@
 module counters(
     input                       clk,
     input                       reset_n,
-    input            [7:0]      feb_day,
+    input            [7:0]     feb_day,
 
     output           [7:0]      H0,
     output           [7:0]      H1,
